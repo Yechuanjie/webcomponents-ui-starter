@@ -1,0 +1,57 @@
+/**
+* 在自定义元素（custom-element）前端组件中，要使用全局样式，要求每个自定义组件必须拥有一个顶层div，且class名包含front-ce
+* 在自定义元素（custom-element）后台组件中，要使用全局样式，要求每个自定义组件必须拥有一个顶层div，且class名包含end-ce
+* 例如：
+* <div class="front-ce jx-user-info"></div>
+* <div class="end-ce jx-radar-popup"></div>
+*/
+
+/**
+* 前端使用的业务组件，elementplus样式重置文件
+*/
+.front-ce {
+  // 修改element-plus默认主题色
+  --el-color-primary: var(--jxui-theme-color);
+  --el-color-primary-dark-2: var(--jxui-theme-color);
+  --el-color-primary-light-3: var(--jxui-theme-color);
+  @extend .reset-el-front;
+}
+.reset-el-front {
+  .el-empty {
+    --el-empty-padding: 80px;
+  }
+  .el-dialog {
+    border-radius: 8px;
+    padding: 20px;
+    &__header {
+      padding: 0;
+    }
+    &__body {
+      padding: 0 !important;
+    }
+    &__footer {
+      padding: 0;
+    }
+    .el-dialog__header {
+      margin-right: 0;
+    }
+  }
+  .el-button {
+    &.el-button--primary {
+      background-color: var(--jxui-theme-color);
+      color: var(--jxui-font-color);
+    }
+  }
+  .el-message {
+    min-width: 180px !important;
+  }
+  .dialog-footer {
+    .yes {
+      background-color: var(--jxui-theme-color);
+      color: var(--jxui-font-color);
+    }
+    .no {
+      color: var(--jxui-theme-color);
+    }
+  }
+}

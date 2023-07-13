@@ -1,0 +1,54 @@
+@import './common.scss';
+@import './element-plus.scss';
+@import './front-ce.scss';
+@import './end-ce.scss';
+
+
+/**
+* 公共mixin和变量
+*/
+$theme-color: var(--jxui-theme-color);
+$font-color: var(--jxui-font-color);
+$text-color: #262937;
+$orange-color: #fa4f25;
+$orange-color-bg: #fde7e5;
+$gray-color: #a1a4b3;
+$gray-color-bg: #f4f7f9;
+
+// 背景图
+@mixin bg($url) {
+  background: url($url) center no-repeat;
+  background-size: 100% 100%;
+}
+
+// 文本超出省略号
+@mixin lines($line) {
+  @if $line == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+    /*将对象作为弹性伸缩盒子模型显示*/
+    display: -webkit-box;
+    /*设置子元素排列方式*/
+    -webkit-box-orient: vertical;
+    /*设置显示的行数，多出的部分会显示为...*/
+    -webkit-line-clamp: $line;
+  }
+}
+// 长英文、数字、横线换行
+@mixin prewrap {
+  word-break: break-all;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+@mixin contentbox($padding: 0, $width: 1200px) {
+  width: $width;
+  margin: 0 auto;
+  padding-top: $padding;
+}

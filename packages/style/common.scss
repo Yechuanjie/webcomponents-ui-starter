@@ -1,0 +1,225 @@
+/* flex 弹性布局
+------------------------------- */
+.flex {
+  display: flex;
+}
+.flex-auto {
+  flex: 1;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-w100 {
+  @extend .flex;
+  width: 100%;
+}
+.flex-middle {
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-start {
+  @extend .flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-around {
+  @extend .flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.flex-between {
+  @extend .flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flex-margin {
+  @extend .flex;
+  margin: auto;
+}
+.flex-warp {
+  @extend .flex;
+  flex-wrap: wrap;
+}
+
+/* cursor 鼠标形状
+------------------------------- */
+// 默认
+.cursor-default {
+  cursor: default !important;
+}
+// 帮助
+.cursor-help {
+  cursor: help !important;
+}
+// 手指
+.cursor-pointer {
+  cursor: pointer !important;
+}
+/* 鼠标手 */
+.cp {
+  cursor: pointer;
+}
+// 移动
+.cursor-move {
+  cursor: move !important;
+}
+
+/* 宽高 100%
+------------------------------- */
+.w100 {
+  width: 100% !important;
+}
+.h100 {
+  height: 100% !important;
+}
+.vh100 {
+  height: 100vh !important;
+}
+.max100vh {
+  max-height: 100vh !important;
+}
+.min100vh {
+  min-height: 100vh !important;
+}
+
+/* 颜色值
+------------------------------- */
+.color-primary {
+  color: var(--el-color-primary);
+}
+.color-success {
+  color: var(--el-color-success);
+}
+.color-warning {
+  color: var(--el-color-warning);
+}
+.color-danger {
+  color: var(--el-color-danger);
+}
+.color-info {
+  color: var(--el-color-info);
+}
+
+/* 字体大小全局样式
+------------------------------- */
+@for $i from 10 through 32 {
+  .font#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+/* 外边距、内边距全局样式
+------------------------------- */
+@for $i from 1 through 35 {
+  .mt#{$i} {
+    margin-top: #{$i}px !important;
+  }
+  .mr#{$i} {
+    margin-right: #{$i}px !important;
+  }
+  .mb#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+  .ml#{$i} {
+    margin-left: #{$i}px !important;
+  }
+  .pt#{$i} {
+    padding-top: #{$i}px !important;
+  }
+  .pr#{$i} {
+    padding-right: #{$i}px !important;
+  }
+  .pb#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+  .pl#{$i} {
+    padding-left: #{$i}px !important;
+  }
+}
+
+/* 文本居中 */
+.textcenter {
+  text-align: center;
+}
+/* 字体加粗 */
+.fontbold {
+  font-weight: 600;
+}
+.fontlabel {
+  font-weight: 600;
+  color: var(--next-color-black);
+}
+
+/* 划线 */
+.underline {
+  color: var(--next-color-primary);
+  text-decoration: underline;
+  @extend .cp;
+}
+/* 浮动 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+// 文本超出省略号
+@mixin lines($line) {
+  @if $line == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+    /*将对象作为弹性伸缩盒子模型显示*/
+    display: -webkit-box;
+    /*设置子元素排列方式*/
+    -webkit-box-orient: vertical;
+    /*设置显示的行数，多出的部分会显示为...*/
+    -webkit-line-clamp: $line;
+  }
+}
+// 长英文、数字、横线换行
+@mixin prewrap {
+  word-break: break-all;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/** 文本指定行数超出省略号 */
+@for $i from 1 through 5 {
+  .ellipsis#{$i} {
+    @include lines(#{$i});
+  }
+}
+
+/**tootip气泡框**/
+.maxW500 {
+  max-width: 450px;
+  max-height: 350px;
+  padding: 0;
+  .content {
+    padding: 10px;
+    max-height: 335px;
+    overflow: auto;
+    p {
+      white-space: pre-wrap;
+      line-height: 1.5;
+      font-size: 12px;
+    }
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  height: 100px;
+  background-color: #dedfe1;
+}

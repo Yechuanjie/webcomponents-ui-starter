@@ -1,0 +1,10 @@
+{
+  "name": "v-ui",
+  "keywords": [],
+  "main": "index.ts",
+  "author": "hwq",
+  "license": "ISC",
+  "dependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
