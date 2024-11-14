@@ -1,3 +1,4 @@
-// export * from '../components'
 
-import { defineCustomElement } from 'vue'
+export * from '@v-ui/components'
+
+export * from '@v-ui/utils'

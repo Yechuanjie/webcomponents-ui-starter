@@ -26,9 +26,13 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue",
+    "packages/**/*.d.ts",
     "typings/vite-env.d.ts"
-  ]
+  ],
+  "exclude": [
+    "node_modules"
+  ],
 }
