@@ -1,10 +1,23 @@
 {
-  "name": "webcomponents-ui-starter",
+  "name": "@vui/v-ui",
+  "scope": "@vui",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/v-ui.umd.cjs",
+  "module": "./dist/v-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/v-ui.js",
+      "require": "./dist/v-ui.umd.cjs"
+    },
+    "./style.css": "./dist/v-ui.css"
+  },
   "scripts": {
-    "dev": "vite --open --port 3200",
+    "dev": "cd examples/vite-vue && vite --open --port 3200",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
