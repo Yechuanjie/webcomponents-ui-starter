@@ -41,6 +41,7 @@ module.exports = {
     'vue/attributes-order': 'off',
     'vue/require-default-prop': 'off',
     'vue/no-v-html': 'off',
+    'vue/valid-define-props': 'off',
     'no-var': 'error',
     'no-undef': 'off',
     'no-empty': 'off',

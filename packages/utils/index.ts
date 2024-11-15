@@ -17,13 +17,12 @@
 // export const register = () => {
 //   // 注册所有组件
 //   components.forEach(comp => {
-//     console.info('comp', comp)
 //     if (comp && comp.name) {
 //       const name = camelCaseToKebabCase(comp.name)
-//       // 将 SFC 注册为自定义元素，避免重复注册
 //       if (!customElements.get(name)) {
+//         // 将 SFC 注册为自定义元素，避免重复注册
 //         customElements.define(name, defineCustomElement(comp))
-//         console.warn(`vast：自定义元素 ${name} 注册成功`)
+//         console.warn(`vast：自定义元素 vast-${name} 注册成功`)
 //       }
 //     }
 //     if (comp && !comp.name) {
@@ -63,12 +62,4 @@ export { VastUserInfo, VastGoodsDetail }
 export function register() {
   customElements.define('vast-user-info', VastUserInfo)
   customElements.define('vast-goods-detail', VastGoodsDetail)
-}
-
-// 注册全局类型
-declare module 'vue' {
-  export interface GlobalComponents {
-    VastUserInfo: typeof VastUserInfo
-    VastGoodsDetail: typeof VastGoodsDetail
-  }
 }

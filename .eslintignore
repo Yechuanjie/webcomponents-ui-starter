@@ -3,6 +3,7 @@ build/
 dist/
 bin/
 scripts/
+typings/
 **/*.min.js
 **/*-min.js
 **/*.bundle.js

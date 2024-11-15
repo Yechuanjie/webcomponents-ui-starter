@@ -2,4 +2,6 @@ import GoodsDetail from './src/index.ce.vue'
 
 export * from './src/type'
 
-export default GoodsDetail
+export const VastGoodsDetail = GoodsDetail
+
+export default VastGoodsDetail
