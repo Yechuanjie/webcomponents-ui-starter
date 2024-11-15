@@ -5,6 +5,6 @@ export * from './src/type'
 // 导出组件实例
 export type UserInfoInstance = InstanceType<typeof UserInfo>
 
-export const VuiUserInfo = UserInfo
+export const VastUserInfo = UserInfo
 
-export default VuiUserInfo
+export default VastUserInfo

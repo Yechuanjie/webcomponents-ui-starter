@@ -1,2 +1,2 @@
-export * from './v-goods-detail'
-export * from './v-user-info'
+export * from './goods-detail'
+export * from './user-info'

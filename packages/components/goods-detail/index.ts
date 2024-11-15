@@ -4,6 +4,6 @@ export * from './src/type'
 
 export type GoodsDetailInstance = InstanceType<typeof GoodsDetail>
 
-export const VuiGoodsDetail = GoodsDetail
+export const VastGoodsDetail = GoodsDetail
 
-export default VuiGoodsDetail
+export default VastGoodsDetail
