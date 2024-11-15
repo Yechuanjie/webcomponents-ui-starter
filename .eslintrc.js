@@ -34,6 +34,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
     'prettier/prettier': 'error',
     'vue/no-deprecated-slot-attribute': 'off',
     'vue/multi-word-component-names': 'off',
