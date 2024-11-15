@@ -13,5 +13,5 @@ module.exports = {
   // 换行长度，默认80
   printWidth: 110,
   // 行尾类型
-  endOfLine: 'lf',
-};
+  endOfLine: 'lf'
+}

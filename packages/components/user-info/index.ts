@@ -2,9 +2,13 @@ import UserInfo from './src/index.ce.vue'
 
 export * from './src/type'
 
-// 导出组件实例
-export type UserInfoInstance = InstanceType<typeof UserInfo>
+export default UserInfo
 
-export const VastUserInfo = UserInfo
-
-export default VastUserInfo
+// import { defineCustomElement } from 'vue'
+// // 将组件转换为 web components
+// export const VastUserInfo = defineCustomElement(UserInfo)
+// declare module 'vue' {
+//   export interface GlobalComponents {
+//     UserInfo: typeof VastUserInfo
+//   }
+// }

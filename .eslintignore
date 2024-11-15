@@ -6,3 +6,6 @@ scripts/
 **/*.min.js
 **/*-min.js
 **/*.bundle.js
+
+.prettierrc.js
+.editorconfig

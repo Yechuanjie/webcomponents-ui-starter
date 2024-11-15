@@ -4,8 +4,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import { onMounted } from 'vue'
-
 defineOptions({ name: 'UserInfo' })
 
 onMounted(() => {
